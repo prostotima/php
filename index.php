@@ -25,7 +25,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $routes = [
     '/' => 'home.php',
     '/login' => 'login.php',
-    '/users' => 'users.php'
+    '/users' => 'users.php',
     '/error' => 'error.php'
 ];
 
