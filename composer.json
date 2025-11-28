@@ -1,0 +1,7 @@
+{
+    "require": {
+        "monolog/monolog": "^3.9",
+        "symfony/var-dumper": "^8.0",
+        "fakerphp/faker": "^1.24"
+    }
+}
