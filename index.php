@@ -26,6 +26,7 @@ $routes = [
     '/' => 'home.php',
     '/login' => 'login.php',
     '/users' => 'users.php'
+    '/error' => 'error.php'
 ];
 
 $title = "Мій сайт";
