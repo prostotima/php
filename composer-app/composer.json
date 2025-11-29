@@ -1,0 +1,13 @@
+{
+    "name": "aquarius/composer-app",
+    "autoload": {
+        "psr-4": {
+            "Aquarius\\ComposerApp\\": "src/"
+        }
+    },
+    "require": {
+        "monolog/monolog": "^3.9",
+        "symfony/var-dumper": "^8.0",
+        "nesbot/carbon": "^3.10"
+    }
+}
