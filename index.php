@@ -2,6 +2,18 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+echo "Composer підключено!";
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Classes\Database;
+
+// приклад використання:
+Database::insertUser("tima", "12345");
+$user = Database::selectUser("tima", "12345");
+
+var_dump($user);
+
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Faker\Factory;
@@ -22,11 +34,28 @@ VarDumper::dump($fakeName);
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+use Carbon\Carbon;
+
+// Monolog
+$log = new Logger('main');
+$log->pushHandler(new StreamHandler(__DIR__ . '/app.log', Logger::INFO));
+$log->info("Сайт відкрито — " . $_SERVER['REQUEST_URI']);
+
+// VarDumper (тільки для тестів)
+dump("VarDumper працює!");
+
+// Carbon
+$now = Carbon::now()->toDateTimeString();
+
+
 $routes = [
     '/' => 'home.php',
     '/login' => 'login.php',
     '/users' => 'users.php',
-    '/404' => '404.php'
+    '/404' => '404.php',
+    '/aboutme' => 'aboutme.php'
 ];
 
 $title = "Мій сайт";
@@ -39,3 +68,4 @@ if (array_key_exists($uri, $routes)) {
     http_response_code(404);
     require __DIR__ . "/pages/404.php";
 }
+
