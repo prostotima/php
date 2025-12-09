@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title><?= $title ?></title>
+    <title><?= htmlspecialchars($title, ENT_QUOTES, 'UTF-8') ?></title>
 </head>
 <body>
 <h1>Авторизація</h1>

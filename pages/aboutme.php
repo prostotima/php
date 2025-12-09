@@ -1,6 +1,8 @@
 <?php
 
 use Classes\AboutMeController;
+<title><?= $title ?></title>
+
 
 $data = AboutMeController::show();
 

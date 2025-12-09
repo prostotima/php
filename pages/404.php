@@ -2,6 +2,7 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <title><?= $title ?></title>
     <title>404 - Не знайдено</title>
 </head>
 <body>
